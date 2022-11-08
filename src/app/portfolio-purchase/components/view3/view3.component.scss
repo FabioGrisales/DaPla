@@ -1,0 +1,234 @@
+@mixin shadow {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.view3{
+  color: #575757;
+  font-size: 14px;
+  background-color: #EBECF0;
+  height: 650px;
+  &__form{
+    border-radius: 10px;
+    padding: 10px;
+    @include shadow();
+    margin: 10px;
+    fieldset{
+      border: none;
+      margin: 10px 0;
+      legend{
+        font-weight: 700;
+      }
+    }
+    .waytopay {
+      font-weight: 400;
+    }
+  }
+  .coverage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 5px;
+    @include shadow();
+    &__input input[type=radio]:not(:checked) + i{
+      background: #00db71;
+      margin: 10px;
+    }
+    &__input{
+      display: flex;
+      flex-direction: row;
+      label{
+        font-size: 12px;
+        span{
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+      .coverage__text{
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+      }
+    }
+  }
+  &__continue{
+    text-align: center;
+    .button__continue:disabled{
+      cursor: no-drop;
+      background-color: #939393;
+    }
+  }
+
+}
+
+
+.invoice{
+  border-radius: 10px;
+  @include shadow();
+  margin: 10px;
+  padding-bottom: 20px;
+  &__title{
+    background-color: #575757;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 5px;
+    padding-left: 15px;
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    &--status{
+      img{
+        margin-right: 10px;
+      }
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+  }
+  &__data{
+    margin: 20px;
+  }
+}
+
+.wrap {
+  height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    margin-left: 14%;
+}
+.quart {
+  position: absolute;
+  height: 50%;
+  width: 50%;
+  background: red;
+  transition: all 0.4s;
+}
+.quart:first-child {
+  top: 0;
+  left: 0;
+}
+.quart:nth-child(2) {
+  top: 0;
+  left: 50%;
+}
+.quart:nth-child(3) {
+  top: 50%;
+  left: -6px;
+}
+.quart:nth-child(4) {
+  top: 50%;
+  left: 52%;
+}
+.center {
+  height: 80%;
+  width: 80%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  background: rgb(255, 253, 253);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 160px;
+  font-size: xx-large;
+}
+.quart:hover {
+  background: dimgray;
+}
+
+#inclinar{
+  color: white;
+}
+
+.quart span {
+  font: 26px Monaco, MonoSpace;
+  height: 200px;
+  position: absolute;
+  width: 20px;
+  left: 0;
+  top: 0;
+  transform-origin: bottom center;
+}
+
+.char1 {
+  transform: rotate(50deg);
+  height: 30px !important;
+  margin-top: 43px;
+        /* margin-right: 10px; */
+  font-size: 14px !important;
+  color: white;
+  background: none;
+  border: none;
+}
+.char2 {
+  transform: rotate(
+    304deg);
+        margin-top: 43px !important;
+        font-size: 14px !important;
+        color: white;
+        background: none;
+        border: none;
+        position: 10px;
+        float: right;
+        /* margin-left: 25px; */
+        /* margin-bottom: 100px; */
+        height: 30px !important;
+        margin-top: 20px;
+}
+
+.beneficios{
+  margin-left: 20%;
+  margin-top: 10%;
+  border: none;
+  background: #cecece;
+  width: 60%;
+  color: black;
+}
+
+@-webkit-keyframes rotate {
+  from { -webkit-transform: rotate(360deg); }
+  to { -webkit-transform: rotate(0); }
+}
+@-moz-keyframes rotate {
+  from { -moz-transform: rotate(360deg); }
+  to { -moz-transform: rotate(0); }
+}
+@-ms-keyframes rotate {
+  from { -ms-transform: rotate(360deg); }
+  to { -ms-transform: rotate(0); }
+}
+@-o-keyframes rotate {
+  from { -o-transform: rotate(360deg); }
+  to { -o-transform: rotate(0); }
+}
+@keyframes rotate {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0); }
+}
+
+.nana{
+  text-align: center;
+  margin-top: 30px;
+  font: normal normal bold 25px/29px Roboto Condensed;
+  color: #000000;
+}
+
+.card-body{
+  text-align: center;
+  background-color:#e9ecef;
+}
+
+:host ::ng-deep{
+  .align-items-start{
+    cursor: pointer;
+  }
+}
+

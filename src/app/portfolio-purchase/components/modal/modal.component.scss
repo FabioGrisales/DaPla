@@ -1,0 +1,58 @@
+.modal__container{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 380px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.329);
+  bottom:  1px;
+  z-index: 1;
+  .modal{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 1px;
+    background-color: white;
+    width: 90%;
+    border-radius: 7px 7px 0 0;
+    nav{
+      display: flex;
+      justify-content: center;
+      height: 50px;
+      margin-top: 20px;
+      border-bottom: solid 0.5px #5757576e;
+      img{
+        margin-right: 10px;
+      }
+
+    }
+    div{
+      text-align: start;
+      color: #575757;
+      p{
+        font-size: 14px;
+      }
+      ul{
+        margin: 0;
+        padding: 0;
+        text-align: start;
+       li{
+        list-style: none;
+        font-size: 14px;
+        font-weight: 100;
+       }
+      }
+    }
+    .terms{
+      color: #575757;
+      margin: 10px 0;
+    }
+    p{
+      font-size: 10px;
+      text-align: center;
+    }
+
+  }
+}

@@ -1,0 +1,84 @@
+<div class="view3">
+  <div class="row align-items-start">
+    <div class="col" style="margin-left: 20px; margin-top: 10px;">
+      <i class="arrow-img">
+        <img src="../../../../assets/images/IconoB_32Menú Hamburguesa (1).svg" alt="">
+      </i>
+    </div>
+    <div class="col" style="text-align: end; margin-right: 20px; margin-top: 10px;">
+      <i class="img-icon-black">
+        <img  src="../../../../assets/images/Grupo 15202.svg" alt="">
+      </i>
+    </div>
+  </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+  $(".quart").lettering();
+</script>
+<div class="wrap">
+  <div [hidden]="true" class="quart"></div>
+  <div [hidden]="true" class="quart"></div>
+  <div class="quart">
+    <input class="char1" (click)="reducirSaldo()" value="pasar" type="submit" value="Pasar Plata">
+  </div>
+  <div class="quart">
+    <input class="char2" value="sacar" type="submit" (click)="reducirSaldo()" value="Sacar Plata">
+  </div>
+  <div class="center">
+    <div>
+        <h3 style="margin-top: 18px ; font: normal normal bold 18px/22px Roboto Condensed; color: black;">Mi DaviPlata</h3>
+
+      <div style="height:100px ; width:200px ;     margin-top: -28px; color: black;">
+    {{this.saldo | currency: 'USD' | lowercase}}
+      </div>
+      <div>
+        <h3>Disponible</h3>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h1 class="nana" >NanaStore</h1>
+    <div class="card" style="background-color:#E2E4EA ; margin-left: 20px; margin-right: 20px;">
+      <div class="card-body "  style="text-align: start;">
+        <h4 class="card-title" style="font: normal normal bold 20px/25px Roboto Condensed;
+        color: #383838;">Vender</h4>
+        <p class="card-text">Elija una opción para recibir el pago de su venta.</p>
+        <div class="row align-items-start">
+          <div class="card col-5" style="margin-right: 30px ; padding: 0; ">
+            <div class="card-body">
+              <img src="../../../../assets/images/Grupo 16605.png" alt="">
+              <p class="card-text" style="font: normal normal bold 14px/18px Roboto Condensed;
+              color: #575757;"> Codigo QR </p>
+            </div>
+          </div>
+          <div class="card col-5" style="padding: 0;">
+            <div class="card-body">
+              <img src="../../../../assets/images/Grupo 17906.svg" alt="">
+              <p class="card-text" style="font: normal normal bold 14px/18px Roboto Condensed;
+              color: #575757;"> Enlace de pago </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div  class="card" style="margin-top:15px ; background-color:#e9ecefe1; margin-left: 20px; margin-right: 20px;">
+      <div class="row align-items-start" (click)="beneficios()">
+        <div class="col-2">
+          <img style="margin-top: 15px ; margin-left: 10px ;" src="../../../../assets/images/Grupo 19297.svg" alt="">
+        </div>
+        <div class="col" style="text-align:start ;">
+          <h4 class="card-title" style="margin-top:12px ; font: normal normal bold 20px/24px Roboto Condensed;
+          color: #575757 ;">Más ingresos para su negocio</h4>
+          <p class="card-text" style="color: #575757;">Conozca los beneficios</p>
+        </div>
+
+      </div>
+      </div>
+
+
+
+
+</div>

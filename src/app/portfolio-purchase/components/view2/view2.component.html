@@ -1,0 +1,84 @@
+<section class="view2">
+
+  <article class="container__form">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="save($event)"
+      class="form"
+      action="" >
+      <h4 style="color: var(--negro);
+      text-align: left;
+      font: normal normal bold 20px/24px Roboto Condensed;
+      letter-spacing: 0px;
+      color: #000000;
+      opacity: 1;
+      margin-bottom: 15px;">Ingrese los siguientes dato</h4>
+
+
+      <label for=""> Escriba su nombre completo</label>
+      <input placeholder="Ingrese el nombre" formControlName="name" type="text">
+
+      <label for=""> Seleccione tipo de documento</label>
+      <select placeholder="Seleccione"  formControlName="seleccione"  type="action">
+        <option value="value1">Cedula de ciudadania</option>
+        <option value="value2">Tarjeta de identidad</option>
+        <option value="value3">Cedula de extranjeria</option>
+      </select>
+
+      <label for=""> Escriba número de documento</label>
+      <input placeholder="Ingrese el numero" formControlName="documento" type="number">
+
+      <label for=""> Escriba ciudad o municipio</label>
+      <input placeholder="Ingrese el nombre" formControlName="ciudad" type="text">
+
+
+      <label for=""> ¿Cuál es su dirección?</label>
+      <div class="row align-items-start">
+        <select class="col-4"  formControlName="address" type="text">
+          <option value="value1">Autopista</option>
+          <option value="value2">Avenida</option>
+          <option value="value3">Avenida calle</option>
+          <option value="value4">Av. carretera</option>
+          <option value="value5">Calle</option>
+        </select>
+        <p class="col-1"></p>
+        <input class="col"   formControlName="text" type="number">
+        <h1 class="col-1"> # </h1>
+        <input class="col"   formControlName="text" type="number">
+        <h1 class="col-1"> - </h1>
+        <input class="col"   formControlName="text" type="number">
+
+      </div>
+
+      <label for=""> Local / Tienda / Barrio / Otro</label>
+      <input placeholder="Opcional" formControlName="opcional" type="text">
+
+
+      <label for=""> Número de celular</label>
+      <input placeholder="Escriba el número" formControlName="telefono" type="number">
+
+
+
+      <div class="view2__continue" >
+
+        <button
+          [disabled]="form.invalid"
+          type="submit"
+          class="button__continue"
+          (click)="cambiar()"
+        >
+          Crear
+        </button>
+
+      </div>
+    </form>
+
+  </article>
+
+  <div class="modal" *ngIf="modalSwitch == true">
+    <app-modal ></app-modal>
+  </div>
+
+
+
+</section>

@@ -1,0 +1,25 @@
+.navbar{
+  background-color: #D9D9D9;
+  .navbar__name{
+    text-align: center;
+    color: #575757;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .navbar__area{
+    display: flex;
+    align-items: flex-start;
+    .navbar__area--icon{
+      padding: 0 10px;
+    }
+    div{
+      margin: 10px;
+    }
+    div > p{
+      margin: 0;
+      font-size: 12px;
+    }
+  }
+}
